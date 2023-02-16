@@ -145,6 +145,36 @@ Appeler une méthode pour le traitement
         
         */
         
+        /*
+        Exercice 7:
+Écrire un programme qui initialise un tableau de 10 éléments, et qui demande ensuite à l’utilisateur d’entrer 10 notes des étudiants, puis appelle une fonction qui va calculer et retourner la moyenne des étudiants.
+        */
+                
+        int i, notes[] ,sum;
+        double moy;
+        notes = new int[10];
+        
+        for(i=0; i <notes.length; i++) {
+            System.out.println("Entrez votre note"); 
+            int n = sc.nextInt() ;
+            notes[i] = n;
+        }
+        
+        sum = 0;
+        moy = 0 ;
+        
+        for (i = 0; i<= notes.length; i++){
+           sum = sum + 1;
+           moy = sum / notes.length;
+        } 
+        
+        System.out.println(moy);
+        
+        
+        
+        
+        
+        
     }
 
 
