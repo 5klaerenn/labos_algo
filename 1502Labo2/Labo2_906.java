@@ -83,10 +83,69 @@ Appeler une fonction pour retourner le resultat
         /*
        Exercice 4 :
 Écrire un algorithme qui demande à l’usager d’entrer un nombre et qui affiche tous les nombres pairs inférieur ou égal à la valeur entrée dans l’ordre décroissant. Par exemple, si on entre 13, on veut voir afficher 12 10 8 6 4 2.
+        
+        
+        int j, i; 
+        
+        System.out.println("Entrez un nombre"); 
+        int n = sc.nextInt(); 
+        
+        if(n%2 !=0){
+            j = n - 1;
+        } else {
+            j = n;
+        }
+        
+        for (i=j; i >0; i -=2){
+            System.out.println(i);
+        }
         */
         
+        /*
+        Exercice 5 :
+Écrire un algorithme qui affiche la table de multiplication (jusqu’à 10) d’un entier positif entré par l’utilisateur
+Appeler une méthode pour le traitement
+
+      
         
-             
+        int result, i;
         
-    }  
+        System.out.println("Entrez un entier positif");
+        int n = sc.nextInt(); 
+        
+        while(n<0){
+            System.out.println("Entrez un entier positif");
+            n = sc.nextInt();
+        }
+        
+        for(i=1; i<=10; i++){
+            result = n*i;
+            System.out.printf("%s", n + "*" + i + "= " + result+ " \n");
+        } 
+         */
+        
+        /*
+        Exercice 6 :
+Écrire un algorithme qui parcoure les nombres de 1 à 10 et les affiche seulement si  a+b =c+d , on les appelle les nombres chanceux (lucky numbers)
+        
+        
+        int a, b, c, d;
+        
+        for (a=1; a<=10; a++){
+            for (b=1; b<=10; b++){
+                for (c=1; c<=10; c++){
+                    for (d=1; d<=10; d++){
+                        if(a+b ==c+d){
+                            System.out.printf("%s %s %s %s", a,  b,  c,  d,  " \n");
+                        }
+                    }
+                }
+            }
+        }
+        
+        */
+        
+    }
+
+
 }
