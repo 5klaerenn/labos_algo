@@ -43,8 +43,6 @@ public class Labo2_906 {
         
         System.out.println("Entrez un nombre entier positif");
         int n = sc.nextInt();
-//        int i;
-//        int somme =0;
         
         while (n < 0) {            
              System.out.println("Entrez un nombre entier positif");
