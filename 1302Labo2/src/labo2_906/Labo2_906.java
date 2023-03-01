@@ -4,6 +4,7 @@
  */
 package labo2_906;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -158,35 +159,79 @@ public class Labo2_906 {
         System.out.println("la moyenne est de : " + moyenne(notes));
         */
         
-               
+        /*
+        
+            EXERCICE 8 :
+        Écrire un algorithme qui lit deux tableaux et qui vérifie si les deux sont égaux (deux tableaux sont égaux s’ils sont de la même taille, 
+        et si leur contenu est le même)
+        */
+        
+        int tab1[], tab2[], a, b, i, j;
+        int k = 0;
+        tab1 = new int[3];
+        tab2 = new int[4];
+        
+        boolean rep = true;
+                
+        for(i=0; i < tab1.length; i++) {
+            System.out.println("Entrez les chiffres du premier tableau"); 
+            a = sc.nextInt() ;
+            tab1[i] = a;
+        }
+        
+        for(j=0; j < tab2.length; j++) {
+            System.out.println("Entrez les chiffres du second tableau"); 
+            b = sc.nextInt() ;
+            tab2[j] = b;
+        }
+        
+        System.out.println(Arrays.toString(tab1));
+        System.out.println(Arrays.toString(tab2));
+        
+        if(tab1.length == tab2.length){
+            while(k < tab1.length && rep == true){
+                if(tab1[k] != tab2[k]){
+                    rep = false;
+                } k++;
+            }
+        } else {
+            rep = false;
+        } 
+           
+        if(rep == false){
+            System.out.println("Les tableaux ne sont pas egaux");
+        } else {
+            System.out.println("Les tableaux sont egaux");
+        }
+        
         
         
     }
     
-    static int maxSum(int n){
-        int i;
-        int somme = 0;
-        for (i=n; i>0; i--) {
-            somme = somme + i;
-        } return somme;
-        }
-
-    static void tables(int n){
-        int i;
-        int result;
-        for(i=1; i<=10; i++){
-            result = n*i;
-            System.out.printf("%s", n + "*" + i + "= " + result + " \n");
-        } 
-        }
-    
-    static double moyenne(int notes[]){
-        int sum = 0;
-        int i;
-        for (i = 0; i < notes.length; i++){
-           sum = sum + notes[i];
-        } 
-        return (double) sum/notes.length;
-        }
+//    static int maxSum(int n){
+//        int i;
+//        int somme = 0;
+//        for (i=n; i>0; i--) {
+//            somme = somme + i;
+//        } return somme;
+//        }
+//
+//    static void tables(int n){
+//        int i;
+//        int result;
+//        for(i=1; i<=10; i++){
+//            result = n*i;
+//            System.out.printf("%s", n + "*" + i + "= " + result + " \n");
+//        } 
+//        }
+//    
+//    static double moyenne(int notes[]){
+//        int sum = 0;
+//        int i;
+//        for (i = 0; i < notes.length; i++){
+//           sum = sum + notes[i];
+//        } 
+//        return (double) sum/notes.length;
+//        }
     
 }
