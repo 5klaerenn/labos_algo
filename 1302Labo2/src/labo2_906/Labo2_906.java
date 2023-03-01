@@ -39,7 +39,7 @@ public class Labo2_906 {
         Par exemple, si l’usager entre le chiffre 8, votre programme devra afficher 36 car  8+7+6+5+4+3+2+1 = 36.
         Appeler une fonction pour retourner le resultat
 
- */      
+       
         
         System.out.println("Entrez un nombre entier positif");
         int n = sc.nextInt();
@@ -53,7 +53,7 @@ public class Labo2_906 {
         
 
         
-        
+     */   
         /*
         Exercice 3 :
 Écrire un algorithme qui demande un nombre entier positif à l’usager et qui calcule ensuite le produit de tous les nombres plus petit ou égaux au nombre entré. 
@@ -80,7 +80,8 @@ public class Labo2_906 {
         
         /*
        Exercice 4 :
-Écrire un algorithme qui demande à l’usager d’entrer un nombre et qui affiche tous les nombres pairs inférieur ou égal à la valeur entrée dans l’ordre décroissant. Par exemple, si on entre 13, on veut voir afficher 12 10 8 6 4 2.
+        Écrire un algorithme qui demande à l’usager d’entrer un nombre et qui affiche tous les nombres pairs inférieur ou égal à la valeur entrée dans l’ordre décroissant. 
+        Par exemple, si on entre 13, on veut voir afficher 12 10 8 6 4 2.
         
         
         int j, i; 
@@ -101,12 +102,11 @@ public class Labo2_906 {
         
         /*
         Exercice 5 :
-Écrire un algorithme qui affiche la table de multiplication (jusqu’à 10) d’un entier positif entré par l’utilisateur
-Appeler une méthode pour le traitement
-
-      
+        Écrire un algorithme qui affiche la table de multiplication (jusqu’à 10) d’un entier positif entré par l’utilisateur
+        Appeler une méthode pour le traitement
         
-        int result, i;
+      
+        //int result, i;
         
         System.out.println("Entrez un entier positif");
         int n = sc.nextInt(); 
@@ -116,12 +116,9 @@ Appeler une méthode pour le traitement
             n = sc.nextInt();
         }
         
-        for(i=1; i<=10; i++){
-            result = n*i;
-            System.out.printf("%s", n + "*" + i + "= " + result+ " \n");
-        } 
-         */
-        
+        tables(n);
+        */
+
         /*
         Exercice 6 :
 Écrire un algorithme qui parcoure les nombres de 1 à 10 et les affiche seulement si  a+b =c+d , on les appelle les nombres chanceux (lucky numbers)
@@ -184,4 +181,13 @@ Appeler une méthode pour le traitement
         } return somme;
         }
 
+    static void tables(int n){
+        int i;
+        int result;
+        for(i=1; i<=10; i++){
+            result = n*i;
+            System.out.printf("%s", n + "*" + i + "= " + result + " \n");
+        } 
+        }
+    
 }
