@@ -167,12 +167,9 @@ public class Labo2_906 {
         */
         
         int tab1[], tab2[], a, b, i, j;
-        int k = 0;
         tab1 = new int[3];
-        tab2 = new int[4];
-        
-        boolean rep = true;
-                
+        tab2 = new int[3];
+             
         for(i=0; i < tab1.length; i++) {
             System.out.println("Entrez les chiffres du premier tableau"); 
             a = sc.nextInt() ;
@@ -184,9 +181,18 @@ public class Labo2_906 {
             b = sc.nextInt() ;
             tab2[j] = b;
         }
+
+        if(compare(tab1, tab2) == false){
+            System.out.println("Les tableaux ne sont pas egaux");
+        } else {
+            System.out.println("Les tableaux sont egaux");
+        }
         
-        System.out.println(Arrays.toString(tab1));
-        System.out.println(Arrays.toString(tab2));
+    }
+        
+    static boolean compare(int tab1[], int tab2[]){
+        int k = 0;
+        boolean rep = true;
         
         if(tab1.length == tab2.length){
             while(k < tab1.length && rep == true){
@@ -196,16 +202,7 @@ public class Labo2_906 {
             }
         } else {
             rep = false;
-        } 
-           
-        if(rep == false){
-            System.out.println("Les tableaux ne sont pas egaux");
-        } else {
-            System.out.println("Les tableaux sont egaux");
-        }
-        
-        
-        
+        } return rep;
     }
     
 //    static int maxSum(int n){
