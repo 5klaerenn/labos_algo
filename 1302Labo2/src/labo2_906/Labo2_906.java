@@ -35,26 +35,25 @@ public class Labo2_906 {
         
         /*
         Exercice 2:
-Écrire un algorithme qui demande un nombre entier positif à l’usager et qui calcule ensuite la somme de tous les nombres plus petit ou égaux au nombre entré. 
-Par exemple, si l’usager entre le chiffre 8, votre programme devra afficher 36 car  8+7+6+5+4+3+2+1 = 36.
-Appeler une fonction pour retourner le resultat
+        Écrire un algorithme qui demande un nombre entier positif à l’usager et qui calcule ensuite la somme de tous les nombres plus petit ou égaux au nombre entré. 
+        Par exemple, si l’usager entre le chiffre 8, votre programme devra afficher 36 car  8+7+6+5+4+3+2+1 = 36.
+        Appeler une fonction pour retourner le resultat
 
  */      
         
         System.out.println("Entrez un nombre entier positif");
         int n = sc.nextInt();
-        int i;
-        int somme =0;
+//        int i;
+//        int somme =0;
         
         while (n < 0) {            
              System.out.println("Entrez un nombre entier positif");
              n = sc.nextInt();
         }
-        for (i=n; i>0; i--) {
-            somme = somme + i;
-        }         
+                    
+        System.out.println(maxSum(n));
         
-        System.out.println(somme);
+
         
         
         /*
@@ -179,6 +178,12 @@ Appeler une méthode pour le traitement
         
     }
     
-
+    static int maxSum(int n){
+        int i;
+        int somme = 0;
+        for (i=n; i>0; i--) {
+            somme = somme + i;
+        } return somme;
+        }
 
 }
