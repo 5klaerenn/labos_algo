@@ -164,7 +164,7 @@ public class Labo2_906 {
             EXERCICE 8 :
         Écrire un algorithme qui lit deux tableaux et qui vérifie si les deux sont égaux (deux tableaux sont égaux s’ils sont de la même taille, 
         et si leur contenu est le même)
-        */
+        
         
         int tab1[], tab2[], a, b, i, j;
         tab1 = new int[3];
@@ -187,24 +187,26 @@ public class Labo2_906 {
         } else {
             System.out.println("Les tableaux sont egaux");
         }
+        */
         
+        /*
+            EXERCICE 9 : 
+        Écrire un algorithme qui lit un tableau de lettre et qui demande à l’utilisateur de saisir une lettre, 
+        ensuite parcoure le tableau et compte le nombre d’occurrence de cette lettre
+        */
+        
+        char ltr;
+        char[] tab1 = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'};
+        
+        System.out.println("Saisissez une lettre");
+        ltr = sc.next().charAt(0);
+        
+        compte(tab1, ltr);
+         
     }
         
-    static boolean compare(int tab1[], int tab2[]){
-        int k = 0;
-        boolean rep = true;
-        
-        if(tab1.length == tab2.length){
-            while(k < tab1.length && rep == true){
-                if(tab1[k] != tab2[k]){
-                    rep = false;
-                } k++;
-            }
-        } else {
-            rep = false;
-        } return rep;
-    }
     
+
 //    static int maxSum(int n){
 //        int i;
 //        int somme = 0;
@@ -230,5 +232,30 @@ public class Labo2_906 {
 //        } 
 //        return (double) sum/notes.length;
 //        }
+//    static boolean compare(int tab1[], int tab2[]){
+//        int k = 0;
+//        boolean rep = true;
+//        
+//        if(tab1.length == tab2.length){
+//            while(k < tab1.length && rep == true){
+//                if(tab1[k] != tab2[k]){
+//                    rep = false;
+//                } k++;
+//            }
+//        } else {
+//            rep = false;
+//        } return rep;
+//    }
+    
+        static void compte(char tab1[], char ltr){
+        int i;
+        int cpteur = 0;
+        
+        for(i=0; i<tab1.length; i++){
+            if(ltr == tab1[i])
+                cpteur++;
+        }      
+        System.out.printf("%s %s", "Votre lettre \"" +ltr+ "\" est apparue " +cpteur, " fois\n");
+    }
     
 }
