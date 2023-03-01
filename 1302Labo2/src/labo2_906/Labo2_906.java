@@ -193,7 +193,7 @@ public class Labo2_906 {
             EXERCICE 9 : 
         Écrire un algorithme qui lit un tableau de lettre et qui demande à l’utilisateur de saisir une lettre, 
         ensuite parcoure le tableau et compte le nombre d’occurrence de cette lettre
-        */
+        
         
         char ltr;
         char[] tab1 = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'};
@@ -202,10 +202,49 @@ public class Labo2_906 {
         ltr = sc.next().charAt(0);
         
         compte(tab1, ltr);
+        */
+        
+        /* 
+            EXERCICE 10 :
+        Écrire un algorithme qui effectue une recherche d’un nombre dans un tableau d’entier positif.
+        Utilisez un booléen, si le nombre a été trouvé.
+        
+        
+        int n;
+        int i = 0;
+        boolean rep = false;
+        int[] tab = {1, 3, 5, 7, 9};
+        
+        n = estEntierPositif();
+        
+        while(i < tab.length && rep == false){
+            if(n == tab[i])
+               rep = true;
+          i++;
+        }
+        
+        if(rep == true){
+            System.out.printf("%s %s %s", "Le nombre ", n, " a ete trouve\n");
+        } else{
+            System.out.println(n+" n'est pas dans la liste");
+        }
+      */  
          
     }
         
-    
+    static int estEntierPositif(){
+        Scanner sc = new Scanner(System.in);
+        int n;
+        do {  
+            System.out.println("Entrez un entier positif");
+            
+            while(!sc.hasNextInt()){
+            System.out.println("Erreur, entrez un nombre entier");
+            sc.next(); 
+            } n = sc.nextInt();
+        } while (n < 0);
+        return n;
+    }
 
 //    static int maxSum(int n){
 //        int i;
@@ -247,15 +286,15 @@ public class Labo2_906 {
 //        } return rep;
 //    }
     
-        static void compte(char tab1[], char ltr){
-        int i;
-        int cpteur = 0;
-        
-        for(i=0; i<tab1.length; i++){
-            if(ltr == tab1[i])
-                cpteur++;
-        }      
-        System.out.printf("%s %s", "Votre lettre \"" +ltr+ "\" est apparue " +cpteur, " fois\n");
-    }
+//        static void compte(char tab1[], char ltr){
+//        int i;
+//        int cpteur = 0;
+//        
+//        for(i=0; i<tab1.length; i++){
+//            if(ltr == tab1[i])
+//                cpteur++;
+//        }      
+//        System.out.printf("%s %s", "Votre lettre \"" +ltr+ "\" est apparue " +cpteur, " fois\n");
+//    }
     
 }
