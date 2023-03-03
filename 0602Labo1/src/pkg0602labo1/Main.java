@@ -57,7 +57,7 @@ public class Main {
         multiplications et de divisions. Assurez-vous que l’on ne puisse diviser
         par zéro.
     ============================================================================
-        */
+        
         
         int nbr1, nbr2;
         String entry;
@@ -72,7 +72,6 @@ public class Main {
         op = entry.charAt(0);
         
         switch(op){
-            case '+':
                 System.out.println(nbr1+nbr2);
                 break;
             case '-':
@@ -91,6 +90,30 @@ public class Main {
                 System.out.println("Erreur");
                 break;
         }
+*/
+        
+            /* 
+    ============================================================================    
+            EXERCICE 3 
+        Écrire un algorithme (pseudo code) qui demande un nombre plus grand que 
+        100.  En cas de réponse inférieure à 100, on fera apparaître un message: 
+        « Plus petit que 100! Entrez de nouveau un nombre.», sinon on fera 
+        apparaître un message : « Votre numéro est : » et on affichera le numéro
+        entré.
+    ============================================================================
+        */   
+            
+         int n;
+         
+        System.out.println("Entrez un nombre plus que 100");
+        n = sc.nextInt();
+        
+        while(n < 100){
+            System.out.println("Plus petit que 100 ! Entrez de nouveau un nombre");
+            n = sc.nextInt();
+        }
+        
+        System.out.println("Votre nombre est : "+n);
         
     }
     
