@@ -188,10 +188,34 @@ public class Main {
         else
             System.out.println("Le plus petit nombre est "+nbr3);
 */
+    /*
+    ============================================================================    
+            EXERCICE 6 
+        Écrire un algorithme (pseudo code) qui permet de savoir si une année est
+        bissextile
+        En fait c'est trés simple, si l 'année est divisible par 4 et en même 
+        temps elle n'est pas divisible par 100 ou au contraire qu'elle soit 
+        divisible par 400 alors elle est bissextile, sinon elle ne l'est pas.
+ 
+    ============================================================================
+        
+    int year; 
+    
+        System.out.println("Entrez l'annee");
+        year = estEntier();
+        
+        if(year >= 0){
+            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+                System.out.println("Annee bissextile");
+            else 
+                System.out.println("Annee non-bissextile");
+        } else 
+            System.out.println("Erreur dans l'entree de l'annee");
+    
+*/
     
     
-    
-    
+
     }
     
         static int estEntier(){
