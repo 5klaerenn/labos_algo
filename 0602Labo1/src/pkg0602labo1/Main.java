@@ -71,7 +71,26 @@ public class Main {
         entry = sc.nextLine();
         op = entry.charAt(0);
         
-        System.out.printf("%d %d %s", nbr1, nbr2, op);
+        switch(op){
+            case '+':
+                System.out.println(nbr1+nbr2);
+                break;
+            case '-':
+                System.out.println(nbr1-nbr2);
+                break;
+            case '*':
+                System.out.println(nbr1*nbr2);
+                break;
+            case '/':
+                if(nbr2 > 0)
+                    System.out.println(nbr1/nbr2);
+                else
+                    System.out.println("Erreur, on ne peut diviser par 0");
+                break;
+            default :
+                System.out.println("Erreur");
+                break;
+        }
         
     }
     
