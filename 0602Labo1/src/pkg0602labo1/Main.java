@@ -152,7 +152,7 @@ public class Main {
             EXERCICE 5 
         Écrire un algorithme qui permet d’échanger le contenu de deux variables
     ============================================================================            
-*/
+
     
     String a, b, c;
     a = "Hello";
@@ -163,10 +163,35 @@ public class Main {
     b = c; 
     
         System.out.println(a+b);
-    
-    
-    
+*/    
+    /*
+    ============================================================================    
+            EXERCICE 6 
+        Produisez le pseudocode qui demande à l’utilisateur de lui fournir 3 
+        nombres et qui affiche le plus petit. 
+    ============================================================================
 
+    
+    int nbr1, nbr2, nbr3; 
+    
+        System.out.println("Entrez un premier nombre");
+        nbr1 = sc.nextInt();
+        System.out.println("Entrez un second nombre");
+        nbr2 = sc.nextInt();
+        System.out.println("Entrez un troisieme nombre");
+        nbr3 = sc.nextInt();
+        
+        if(nbr1 <= nbr2 && nbr1 <= nbr3)
+            System.out.println("Le plus petit nombre est "+nbr1);
+        else if(nbr2 <= nbr1 && nbr2 <= nbr3)
+            System.out.println("Le plus petit nombre est "+nbr2);
+        else
+            System.out.println("Le plus petit nombre est "+nbr3);
+*/
+    
+    
+    
+    
     }
     
         static int estEntier(){
