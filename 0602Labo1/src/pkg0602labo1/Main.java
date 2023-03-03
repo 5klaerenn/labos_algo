@@ -214,8 +214,43 @@ public class Main {
     
 */
     
+    /*
+    ============================================================================    
+            EXERCICE 6 
+        Écrire un pseudocode qui permet au DAB (Distributeur Automatique de 
+        Billets) de donner l’argent a un client en utilisant sa carte de retrait
+ 
+    ============================================================================
+ 
     
-
+    int carteBanque, pinBanque, carteUsr, pinUsr, retrait, solde;
+        
+    carteBanque = 12345678;
+    pinBanque = 0000;
+    solde = 1000;
+    
+        System.out.println("Entrez votre numero de carte");
+        carteUsr = estEntier();
+        
+        if(carteUsr == carteBanque){
+            System.out.println("Entrez votre PIN");
+            pinUsr = estEntier();
+            if(pinUsr == pinBanque){
+                System.out.println("Combien voulez-vous retirer ?");
+                retrait = estEntier();
+                if(solde > retrait){
+                    solde = solde - retrait;
+                    System.out.println("Vous pouvez recuperer votre argent");
+                    System.out.println("Votre nouveau solde est : "+solde);
+                } else
+                    System.out.println("Solde insuffisant");
+            } else 
+                System.out.println("Erreur, solde insuffisant");
+        } else
+            System.out.println("Erreur, la carte inseree n'est pas valide");
+  
+*/
+    
     }
     
         static int estEntier(){
