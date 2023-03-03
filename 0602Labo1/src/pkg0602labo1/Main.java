@@ -101,7 +101,7 @@ public class Main {
         apparaître un message : « Votre numéro est : » et on affichera le numéro
         entré.
     ============================================================================
-        */   
+          
             
          int n;
          
@@ -114,7 +114,59 @@ public class Main {
         }
         
         System.out.println("Votre nombre est : "+n);
-        
+*/ 
+            
+                /* 
+    ============================================================================    
+            EXERCICE 4 
+        Faites l’algorithme (pseudo code) permettant de classer en ordre 
+        croissant trois nombres fournis par l’usager du programme.
+    ============================================================================        
+
+                
+        int a, b, c;
+         
+        System.out.println("Entrez un premier nombre");
+        a = sc.nextInt();
+        System.out.println("Entrez un second nombre");
+        b = sc.nextInt();
+        System.out.println("Entrez un troisieme nombre");
+        c = sc.nextInt();
+                        
+        if(a<=b && b<=c)
+            System.out.printf("%s %s %s\n", a, b, c);
+        else if(a<=c && c<=b)
+            System.out.printf("%s %s %s\n", a, c, b);
+        else if(b<=c && c<=a)
+            System.out.printf("%s %s %s\n", b, c, a);
+        else if(b<=a && a<=c)
+            System.out.printf("%s %s %s\n", b, a, c);
+        else if(c<=a && a <=b)
+            System.out.printf("%s %s %s\n", c, a, b);
+        else 
+            System.out.printf("%s %s %s\n", c, b, a);
+                
+*/                 
+    /* 
+    ============================================================================    
+            EXERCICE 5 
+        Écrire un algorithme qui permet d’échanger le contenu de deux variables
+    ============================================================================            
+*/
+    
+    String a, b, c;
+    a = "Hello";
+    b = "World";
+    
+    c = a;
+    a = b; 
+    b = c; 
+    
+        System.out.println(a+b);
+    
+    
+    
+
     }
     
         static int estEntier(){
